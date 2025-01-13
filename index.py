@@ -8,7 +8,7 @@ def lambda_handler(event, context):
     return {
         "statusCode": 200,
         "body": json.dumps({
-            "message": "Hello, AWS CodePipeline and GitHub integration works Steve!",
+            "message": "Hello, AWS CodePipeline and GitHub integration works Stever!",
             "input": event
         })
     }
