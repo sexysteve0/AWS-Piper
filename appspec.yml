@@ -1,0 +1,14 @@
+
+version: 0.0
+Resources:
+  - myLambdaFunction:
+      Type: AWS::Lambda::Function
+      Properties:
+        Name: MyLambdaFunction  # Replace with your Lambda function's name
+        Alias: live             # Replace with the alias name you want to use
+        CurrentVersion: true
+        TrafficRoutingConfig:
+          Type: TimeBasedCanary
+          TimeBasedCanary:
+            Percentage: 10      # Shift 10% of traffic during the canary phase
+            Interval: 5         # Wait 5 minutes before shifting the remaining traffic
