@@ -6,7 +6,7 @@ def lambda_handler(event, context):
     try:
         message = {
             "status": "success",
-            "message": "Hello from Lambda1!",
+            "message": "Hello from Lambda12!",
             "input": event
         }
         return {
