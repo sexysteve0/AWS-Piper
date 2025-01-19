@@ -1,9 +1,9 @@
 version: 0.0
 Resources:
-  - TestLambdaFunction:
+  - lambdaFunction:
       Type: AWS::Lambda::Function
       Properties:
-        Name: "TestLambdaFunction" # Replace with your Lambda function name
-        Alias: "live" # Replace with your alias name
-        CurrentVersion: "1" # Replace with the current published version
-        TargetVersion: "2" # Replace with the new published version
+        Name: TestLambdaFunction
+        Alias: live
+        CurrentVersion: {{CURRENT_VERSION}}
+        TargetVersion: {{TARGET_VERSION}}
