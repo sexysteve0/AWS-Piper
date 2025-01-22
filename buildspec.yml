@@ -6,7 +6,8 @@ phases:
   build:
     commands:
       - pip install -r requirements.txt -t .
-      - zip -r function.zip . appspec.yml index.py
+      - zip -r function.zip . index.py
 artifacts:
   files:
+    - appspec.yml
     - function.zip
